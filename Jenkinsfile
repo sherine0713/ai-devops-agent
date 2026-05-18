@@ -3,9 +3,15 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
+        stage('Checkout') {
             steps {
                 echo 'Cloning repository...'
+            }
+        }
+
+        stage('Test Application') {
+            steps {
+                sh 'python3 app.py'
             }
         }
 
@@ -17,10 +23,8 @@ pipeline {
 
         stage('Stop Old Container') {
             steps {
-                sh '''
-                docker stop ai-devops-container || true
-                docker rm ai-devops-container || true
-                '''
+                sh 'docker stop ai-devops-container || true'
+                sh 'docker rm ai-devops-container || true'
             }
         }
 
