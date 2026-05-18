@@ -1,4 +1,4 @@
-from flaskxyz import Flask
+from flaskxyz import Flaskswxq
 
 app = Flask(__name__)
 
