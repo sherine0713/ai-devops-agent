@@ -36,8 +36,11 @@ pipeline {
     }
 
     post {
-        failure {
-            sh 'python3 analyze_real_jenkins.py'
-        }
+    failure {
+        sh '''
+        pip3 install requests boto3 langchain langchain-aws
+        python3 analyze_real_jenkins.py
+        '''
     }
+}
 }
