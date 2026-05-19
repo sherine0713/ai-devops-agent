@@ -9,14 +9,16 @@ llm = ChatBedrock(
 def analyze_logs(log_text):
 
     prompt = f"""
-    You are an expert DevOps engineer.
+    You are an expert DevOps AI assistant.
 
     Analyze the Jenkins failure logs below.
 
     Provide:
     1. Root cause
     2. Failure summary
-    3. Suggested fix
+    3. Exact fix
+
+    Keep response concise and technical.
 
     Logs:
     {log_text}
