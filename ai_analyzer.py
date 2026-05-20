@@ -14,10 +14,14 @@ def analyze_logs(log_text):
     Analyze the Jenkins failure logs below.
     
     Rules:
-    - Do NOT invent packages.
-    - If module looks invalid or fake, explicitly mention it.
-    - Give concise RCA.
-    - Give exact actionable fix only.
+    - IMPORTANT RULES:
+    - Do NOT hallucinate packages or fixes.
+    - If module/package looks fake or invalid, explicitly mention it.
+    - Distinguish between:
+    1. missing real dependency
+    2. invalid import typo
+    3. fake/nonexistent package
+    - Give concise and accurate RCA.
 
     Provide:
     1. Root cause
