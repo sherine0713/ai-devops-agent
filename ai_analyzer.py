@@ -12,6 +12,12 @@ def analyze_logs(log_text):
     You are an expert DevOps AI assistant.
 
     Analyze the Jenkins failure logs below.
+    
+    Rules:
+    - Do NOT invent packages.
+    - If module looks invalid or fake, explicitly mention it.
+    - Give concise RCA.
+    - Give exact actionable fix only.
 
     Provide:
     1. Root cause
