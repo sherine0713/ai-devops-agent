@@ -17,6 +17,8 @@ def analyze_logs(log_text):
     - IMPORTANT RULES:
     - Do NOT hallucinate packages or fixes.
     - If module/package looks fake or invalid, explicitly mention it.
+    - Do NOT recommend pip install unless it is a well-known real package.
+    - Focus on root cause accuracy over generic advice.
     - Distinguish between:
     1. missing real dependency
     2. invalid import typo
